@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        h1{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        #show{
+            border: thin solid white;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.164);
+            height: 10vh;
+            margin-top: 20px;
+            display: flex;
+        }
+        #imgholder{
+
+        }
+
+    </style>
+<body>
+    <h1>ASSIGNMENT API FAKE STORE PRODUCTS</h1>
+    <div id="show">
+        <div id="imgholder">
+
+        </div>
+    </div>
+</body>
+    <script>
+      const getProduct = async () =>{
+        let res = await fetch('http://localhost:4002/getAllProducts')
+        console.log(res);
+        let data = await res.json()
+        console.log(data);
+        data.response.forEach(product => {
+            show.innerHTML +=   `
+            
+            `
+        });
+      }
+      getProduct()
+    </script>
+</html>
