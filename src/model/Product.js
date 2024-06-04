@@ -29,9 +29,6 @@ const ProductSchema = mongoose.Schema({
         type: String,
         
     }
-    
-
-
 })
 
 

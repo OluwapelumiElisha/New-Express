@@ -12,17 +12,6 @@ async function getAllProduct(req, res){
 }
 
 
-// async function PostProduct(req, res){
-//     const {title, price, description, category, image, rating} = req.body
-//     try{
-//         const response = await Product.create({title, price, description, category, image, rating})
-//         console.log(response)
-//         res.json({message: 'Product created success', response}).status(201)
-//     } catch (error){
-//         console.log(error);
-//         res.json({message: 'here is an error', error}).status(505)
-//     }
-// }
 
 async function getSingleProduct(req, res) {
     try {
@@ -55,17 +44,7 @@ async function getSingleProduct(req, res) {
         } catch (error) {
             console.log(error)
         }
-        // try {
-          
-        // const response = await Product.create(req.body)
-        // if (!response) {
-        //   return  res.status(404).json.message({message: "Error While Creaing product"})
-        // }
-        // res.status(201).json({message: "Product Created Successfully", response})
-        // } catch (error) {
-        //     console.log(error);
-        //     res.status(505).json({message: "Is an error", error})
-        // }
+      
     }
     const UpdateProducts = async(req,res) =>{
         try {
